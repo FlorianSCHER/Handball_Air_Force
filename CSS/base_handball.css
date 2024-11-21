@@ -9,50 +9,67 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Inclut les bordures et paddings dans la taille totale */
+    box-sizing: border-box;
+    /* Inclut les bordures et paddings dans la taille totale */
 }
 
 /* =================================================================
    Styles généraux
 ================================================================= */
 body {
-    font-family: 'Roboto', Arial, sans-serif; /* Police principale */
-    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
-    color: #333; /* Couleur principale du texte */
-    background-color: #f4f4f4; /* Fond clair */
+    font-family: 'Roboto', Arial, sans-serif;
+    /* Police principale */
+    line-height: 1.6;
+    /* Espacement des lignes pour une meilleure lisibilité */
+    color: #333;
+    /* Couleur principale du texte */
+    background-color: #f4f4f4;
+    /* Fond clair */
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre le contenu horizontalement */
-    text-align: center; /* Centre également le texte globalement */
+    align-items: center;
+    /* Centre le contenu horizontalement */
+    text-align: center;
+    /* Centre également le texte globalement */
 }
 
 img {
-    max-width: 100%; /* Les images ne dépassent jamais leur conteneur */
-    height: auto; /* Conserve les proportions des images */
+    max-width: 100%;
+    /* Les images ne dépassent jamais leur conteneur */
+    height: auto;
+    /* Conserve les proportions des images */
 }
 
 /* =================================================================
    En-tête
 ================================================================= */
 header {
-    background-color: #0066cc; /* Couleur bleue pour l'en-tête */
-    color: white; /* Texte en blanc pour contraste */
+    background-color: #0066cc;
+    /* Couleur bleue pour l'en-tête */
+    color: white;
+    /* Texte en blanc pour contraste */
     padding: 10px 20px;
-    width: 100%; /* Occupe toute la largeur */
-    text-align: center; /* Centre le texte de l'en-tête */
+    width: 100%;
+    /* Occupe toute la largeur */
+    text-align: center;
+    /* Centre le texte de l'en-tête */
 }
 
 header h1 {
-    font-size: 2.5rem; /* Taille du titre principale */
-    font-family: 'Montserrat', sans-serif; /* Police secondaire pour les titres */
+    font-size: 2.5rem;
+    /* Taille du titre principale */
+    font-family: 'Montserrat', sans-serif;
+    /* Police secondaire pour les titres */
 }
 
 header nav ul {
     display: flex;
-    justify-content: center; /* Centre les liens horizontalement */
-    list-style: none; /* Supprime les puces */
+    justify-content: center;
+    /* Centre les liens horizontalement */
+    list-style: none;
+    /* Supprime les puces */
     margin-top: 10px;
 }
 
@@ -61,35 +78,48 @@ header nav ul li {
 }
 
 header nav ul li a {
-    text-decoration: none; /* Supprime le soulignement */
-    color: white; /* Texte blanc */
+    text-decoration: none;
+    /* Supprime le soulignement */
+    color: white;
+    /* Texte blanc */
     padding: 5px 10px;
-    border-radius: 5px; /* Coins arrondis */
+    border-radius: 5px;
+    /* Coins arrondis */
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    transition: background-color 0.3s ease-in-out; /* Transition fluide */
+    transition: background-color 0.3s ease-in-out;
+    /* Transition fluide */
 }
 
-header nav ul li a.active, header nav ul li a:hover {
-    background-color: #004c99; /* Couleur de survol */
+header nav ul li a.active,
+header nav ul li a:hover {
+    background-color: #004c99;
+    /* Couleur de survol */
 }
 
 /* =================================================================
    Bannières (logos en haut et en bas)
 ================================================================= */
-.top-banner, .bottom-banner {
+.top-banner,
+.bottom-banner {
     display: flex;
-    justify-content: center; /* Centre les images horizontalement */
-    align-items: center; /* Centre les images verticalement */
-    gap: 15px; /* Espacement entre les images */
+    justify-content: center;
+    /* Centre les images horizontalement */
+    align-items: center;
+    /* Centre les images verticalement */
+    gap: 15px;
+    /* Espacement entre les images */
     background-color: white;
     padding: 10px;
     width: 100%;
-    border-bottom: 1px solid #ddd; /* Ligne de séparation discrète */
+    border-bottom: 1px solid #ddd;
+    /* Ligne de séparation discrète */
 }
 
-.top-banner img, .bottom-banner img {
-    width: 80px; /* Taille uniforme des images */
+.top-banner img,
+.bottom-banner img {
+    width: 80px;
+    /* Taille uniforme des images */
     max-height: 60px;
     height: auto;
 }
@@ -99,43 +129,58 @@ header nav ul li a.active, header nav ul li a:hover {
 ================================================================= */
 .social-icons {
     display: flex;
-    justify-content: center; /* Centre les icônes horizontalement */
-    gap: 15px; /* Espacement entre les icônes */
+    justify-content: center;
+    /* Centre les icônes horizontalement */
+    gap: 15px;
+    /* Espacement entre les icônes */
     margin: 10px 0;
 }
 
 .social-icons img {
-    width: 40px; /* Taille fixe pour les icônes */
+    width: 40px;
+    /* Taille fixe pour les icônes */
     height: 40px;
-    border-radius: 50%; /* Icônes circulaires */
+    border-radius: 50%;
+    /* Icônes circulaires */
     transition: transform 0.3s ease-in-out;
 }
 
 .social-icons img:hover {
-    transform: scale(1.1); /* Zoom au survol */
+    transform: scale(1.1);
+    /* Zoom au survol */
 }
 
 /* =================================================================
    Section principale (contenu)
 ================================================================= */
 main {
-    max-width: 1200px; /* Limite la largeur */
-    margin: 20px auto; /* Centre le contenu horizontalement */
-    background-color: white; /* Fond blanc pour contraste */
+    max-width: 1200px;
+    /* Limite la largeur */
+    margin: 20px auto;
+    /* Centre le contenu horizontalement */
+    background-color: white;
+    /* Fond blanc pour contraste */
     padding: 20px;
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
-    text-align: center; /* Centre le texte */
-    width: 90%; /* Ajuste pour les petits écrans */
+    border-radius: 10px;
+    /* Coins arrondis */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Ombre légère */
+    text-align: center;
+    /* Centre le texte */
+    width: 90%;
+    /* Ajuste pour les petits écrans */
 }
 
 main h2 {
-    color: #0066cc; /* Titre secondaire en bleu */
+    color: #0066cc;
+    /* Titre secondaire en bleu */
     margin: 20px 0;
-    border-bottom: 2px solid #ddd; /* Ligne décorative */
+    border-bottom: 2px solid #ddd;
+    /* Ligne décorative */
     padding-bottom: 5px;
     font-family: 'Montserrat', sans-serif;
-    text-align: center; /* Centre les sous-titres */
+    text-align: center;
+    /* Centre les sous-titres */
 }
 
 main p {
@@ -143,13 +188,16 @@ main p {
 }
 
 main ul {
-    list-style-type: disc; /* Puces classiques */
+    list-style-type: disc;
+    /* Puces classiques */
     margin: 10px 0 20px 20px;
-    text-align: left; /* Les listes restent alignées à gauche */
+    text-align: left;
+    /* Les listes restent alignées à gauche */
 }
 
 main ul ul {
-    list-style-type: circle; /* Sous-listes avec puces circulaires */
+    list-style-type: circle;
+    /* Sous-listes avec puces circulaires */
 }
 
 /* =================================================================
@@ -159,19 +207,24 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    font-size: 0.9rem; /* Texte légèrement réduit */
+    font-size: 0.9rem;
+    /* Texte légèrement réduit */
 }
 
-table th, table td {
+table th,
+table td {
     border: 1px solid #ddd;
     padding: 10px;
-    text-align: center; /* Centre le texte dans les cellules */
-    word-wrap: break-word; /* Empêche les débordements */
+    text-align: center;
+    /* Centre le texte dans les cellules */
+    word-wrap: break-word;
+    /* Empêche les débordements */
 }
 
 table th {
     background-color: #0066cc;
-    color: white; /* Texte blanc pour contraste */
+    color: white;
+    /* Texte blanc pour contraste */
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -180,70 +233,214 @@ table tr:nth-child(even) {
 }
 
 table tr:hover {
-    background-color: #f1f1f1; /* Surlignage au survol */
+    background-color: #f1f1f1;
+    /* Surlignage au survol */
 }
 
 /* =================================================================
-   Responsive Design : Adaptation tablettes et mobiles
+   Section Sanctions
 ================================================================= */
+#sanctions {
+    display: flex;
+    flex-direction: column;
+    /* Aligne les éléments en colonne */
+    align-items: center;
+    /* Centre horizontalement */
+    text-align: center;
+    /* Centre le texte à l'intérieur */
+    margin: 30px 0;
+    /* Ajoute un peu d'espace au-dessus et en dessous */
+}
+
+#sanctions h2 {
+    font-size: 2rem;
+    /* Taille du titre */
+    color: #0066cc;
+    /* Couleur bleue pour le titre */
+    margin-bottom: 20px;
+    /* Espacement sous le titre */
+}
+
+#sanctions p {
+    font-size: 1rem;
+    /* Taille de la police du paragraphe */
+    margin-bottom: 20px;
+    /* Espacement sous le paragraphe */
+}
+
+#sanctions ul {
+    list-style-type: disc;
+    /* Puces classiques */
+    padding-left: 20px;
+    /* Indentation pour les puces */
+}
+
+#sanctions li {
+    font-size: 1rem;
+    /* Taille de la police des éléments de la liste */
+    margin-bottom: 10px;
+    /* Espacement entre les éléments */
+}
 @media (max-width: 768px) {
+    /* =================================================================
+    Ajuste la taille du titre principal dans l'en-tête sur mobile
+    ================================================================== */
     header h1 {
         font-size: 2rem;
     }
 
+    /* =================================================================
+    Modification du menu de navigation : passe les éléments en colonne
+    pour s'adapter aux petits écrans
+    ================================================================== */
     header nav ul {
-        flex-direction: column; /* Les liens passent en colonne */
+        flex-direction: column;
+        /* Les liens passent en colonne */
         align-items: center;
+        width: 100%; /* Assure que les liens prennent toute la largeur */
     }
 
-    .top-banner, .bottom-banner {
-        flex-direction: column; /* Les logos passent en colonne */
-        gap: 10px;
+    /* =================================================================
+    Ajuste la disposition des bannières (top et bottom) en colonne
+    ================================================================== */
+    .top-banner,
+    .bottom-banner {
+        flex-direction: column;
+        /* Les logos passent en colonne */
+        gap: 10px; /* Espacement réduit entre les logos */
+        width: 100%; /* Prend toute la largeur */
     }
 
-    .top-banner img, .bottom-banner img {
-        width: 60px;
+    /* =================================================================
+    Modifie la taille des images dans les bannières pour s'ajuster à la taille mobile
+    ================================================================== */
+    .top-banner img,
+    .bottom-banner img {
+        width: 80%;
+        /* Les images prennent 80% de la largeur de l'écran */
         max-height: 50px;
+        height: auto; /* Maintient la proportion de l'image */
     }
 
-    /* Tables converties pour mobiles */
-        body {
-            background-color: white; /* Supprime le fond gris */
-        }
-    
-        main {
-            background-color: white; /* Supprime le fond blanc principal */
-            padding: 15px; /* Réduit l'espace pour mobile */
-        }
-    
-        table {
-            width: auto; /* Tableaux s'ajustent au contenu sur mobile */
-            margin: 15px auto; /* Centre les tableaux */
-        }
-    
-        table th, table td {
-            border: none; /* Supprime les bordures des cellules */
-            padding: 8px; /* Réduit les espaces internes */
-            text-align: left; /* Alignement à gauche pour mobile */
-        }
-    
-        table tr:nth-child(even) {
-            background-color: transparent; /* Supprime le fond alterné */
-        }
-    
-        table tr:hover {
-            background-color: transparent; /* Supprime le surlignage au survol */
-        }
+    /* =================================================================
+    Modifie l'apparence du corps de la page pour occuper toute la largeur de l'écran
+    ================================================================== */
+    body {
+        background-color: white;
+        /* Supprime le fond gris */
+        width: 100%; /* Utilise toute la largeur disponible */
+    }
+
+    /* =================================================================
+    Mise en page de la section principale : réduction des marges et padding
+    pour occuper tout l'écran sur mobile
+    ================================================================== */
+    main {
+        background-color: white;
+        padding: 15px;
+        width: 100%; /* Prend toute la largeur de l'écran */
+        box-shadow: none; /* Supprime l'ombre (cadre) */
+        border-radius: 0; /* Supprime les coins arrondis */
+        margin: 0; /* Supprime les marges */
+    }
+
+    /* =================================================================
+    Tables : ajustement pour qu'elles prennent toute la largeur disponible
+    ================================================================== */
+    table {
+        width: 100%; /* Utilise toute la largeur de l'écran */
+        margin: 15px 0; /* Espacement autour des tableaux */
+    }
+
+    /* =================================================================
+    Modification du style des cellules de tableau pour une meilleure lisibilité
+    ================================================================== */
+    table th,
+    table td {
+        border: 1px solid #ddd; /* Garde la bordure, mais peut être ajustée si nécessaire */
+        padding: 8px; /* Réduit les espaces internes */
+        text-align: left; /* Aligne le texte à gauche pour plus de lisibilité */
+    }
+
+    /* =================================================================
+    Supprime les couleurs de fond alternées dans les tableaux pour mobile
+    ================================================================== */
+    table tr:nth-child(even) {
+        background-color: transparent;
+        /* Supprime le fond alterné des lignes */
+    }
+
+    /* =================================================================
+    Supprime l'effet de survol pour les tableaux sur mobile
+    ================================================================== */
+    table tr:hover {
+        background-color: transparent;
+        /* Supprime le surlignage au survol */
+    }
+
+    /* =================================================================
+    Section "Sanctions" : ajuste les espacements et la taille de police
+    pour une meilleure lisibilité sur mobile
+    ================================================================== */
+    #sanctions {
+        margin: 20px 0;
+        /* Espacement adapté pour mobile */
+    }
+
+    #sanctions h2 {
+        font-size: 1.8rem; /* Réduit la taille du titre pour l'adapter à l'écran */
+    }
+
+    #sanctions p {
+        font-size: 1rem;
+        margin-bottom: 15px; /* Réduit l'espacement sous le paragraphe */
+    }
+
+    #sanctions ul {
+        list-style-type: disc; /* Liste avec puces classiques */
+        padding-left: 20px; /* Indentation pour les puces */
+    }
+
+    #sanctions li {
+        font-size: 1rem; /* Taille de la police des éléments de la liste */
+        margin-bottom: 10px; /* Espacement entre les éléments */
+    }
+
+    /* =================================================================
+    Icônes sociales : réduit leur taille et ajuste l'espacement
+    ================================================================== */
+    .social-icons {
+        gap: 10px; /* Réduit l'espacement entre les icônes */
+    }
+
+    .social-icons img {
+        width: 35px;
+        height: 35px; /* Réduit la taille des icônes à 35px */
+    }
+
+    /* =================================================================
+    Animations : effets de survol plus adaptés pour mobile
+    ================================================================== */
+    header nav ul li a:hover {
+        transform: translateY(-3px); /* Déplace légèrement l'élément au survol */
+        transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+    .social-icons img:hover {
+        transform: rotate(10deg) scale(1.2); /* Ajoute une rotation et un zoom au survol */
+        transition: transform 0.3s ease;
+    }
+}
 
 /* =================================================================
    Animations CSS
 ================================================================= */
-header nav ul li a:hover {
-    transform: translateY(-3px);
-    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
-}
+    header nav ul li a:hover {
+        transform: translateY(-3px);
+        transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+    }
 
-.social-icons img:hover {
-    transform: rotate(10deg) scale(1.2);
-    transition: transform 0.3s ease;
-}
+    .social-icons img:hover {
+        transform: rotate(10deg) scale(1.2);
+        transition: transform 0.3s ease;
+    }
