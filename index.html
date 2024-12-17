@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handball Pulse</title>
+    <title>Handball Air Force</title>
     <link rel="stylesheet" href="CSS/base_handball.css">
     <!-- Importation des polices -->
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    
+
     <header class="bandeau">
         <div class="social-icons">
             <a href="https://www.instagram.com" target="_blank">
@@ -32,47 +33,97 @@
         <nav>
             <ul>
                 <li><a href="index.html" class="active">Accueil</a></li>
-                <li><a href="/Pages_HTML/base_handball.html" >Les bases du handball</a></li>
+                <li><a href="/Pages_HTML/base_handball.html">Les bases du handball</a></li>
                 <li><a href="/Pages_HTML/histoire.html">Histoire du handball</a></li>
-                <li><a href="/Pages_HTML/ligue_des_champions.html" >Ligue des Champions</a></li>
-                <li><a href="/Pages_HTML/a_propos.html" >A propos</a></li>
+                <li><a href="/Pages_HTML/ligue_des_champions.html">Ligue des Champions</a></li>
+                <li><a href="/Pages_HTML/a_propos.html">A propos</a></li>
             </ul>
         </nav>
-    <strong>
-            <h1>Handball Pulse</h1>
-        </strong></header>
+        <strong>
+            <h1>Handball Air Force</h1>
+        </strong>
+    </header>
     <main>
-        <section id="accueil">
-            <h2>Accueil</h2>
-            <p>Découvrez tout ce que vous devez savoir sur le handball, de ses règles aux dernières actualités.</p>
+        <section id="slogan">
+            <P id="texte">Plongez dans l'univers du handball : techniques, histoire, compétition.</P>
         </section>
-        <section id="regles">
-            <h2>Règles du Handball</h2>
-            <p> Dans cet section vous decouvrirez les règles détaillé du handball</p>
+        <section>
+            <p id="texte">Découvrez les fondamentaux du handball, suivez la Ligue des Champions, explorez son histoire
+                passionnante
+                et partagez une passion commune.</p>
         </section>
-        <section id="histoire">
-            <h2>Histoire du Handball</h2>
-            <p>Le handball est un sport qui trouve ses origines...</p>
+        <section id="Accroche">
+            <h1 id="title"> Vivez le handball à 10000% ! avec Handball Air Force </h1>
+            <a href="https://fr.wikipedia.org/wiki/Les_Barjots"> <img src="Images/barjot.jpg" alt="Les barjots"></a>
+            <p>La phrase "On n'est pas des stars, on est des Barjots !", popularisée par Jackson Richardson et qui a
+                fais changer l'histoire du handball français, symbolise
+                parfaitement l'esprit de l'équipe de France de handball des années 1990, surnommée les Barjots. Cette
+                génération, connue pour son jeu spectaculaire, son audace et son attitude décalée, a marqué un tournant
+                dans l'histoire du handball français en décrochant la médaille d'argent au Championnat du monde 1993.
+                Leur esprit festif, leur camaraderie et leur humilité les rendaient uniques et attachants, contrastant
+                avec l'image plus stricte du sport de haut niveau. Les Barjots ont ouvert la voie aux générations
+                suivantes en prouvant que passion, solidarité et authenticité pouvaient mener à l'excellence, posant
+                ainsi les bases des succès futurs du handball français.
+            </p>
         </section>
-        <section id="equipes">
-            <h2>Équipes et Joueurs</h2>
-            <p>Retrouvez les équipes locales, nationales, et internationales.</p>
+        <section class="defillement">
+            <div class="pages">
+                <i class="fa-solid fa-hand"></i>
+                <h3>Les bases du handball</h3>
+                <p>Découvrez les règles fondamentales, les techniques essentielles et les postes clés pour bien
+                    comprendre le jeu.</p>
+                <a href="Pages_HTML/base_handball.html">En savoir plus</a>
+            </div>
+
+            <div class="pages">
+                <i class="fa-solid fa-hand"></i>
+                <h3>Ligue des Champions</h3>
+                <p>Suivez l'actualité de la Ligue des Champions : équipes, résultats, moments forts et classements.</p>
+                <a href="Pages_HTML/ligue_des_champions.html"> Une compétition prestigieuse ?</a>
+            </div>
+
+            <div class="pages">
+                <i class="fa-solid fa-hand"></i>
+                <h3>Histoire du handball</h3>
+                <p>Du début du XXe siècle à aujourd'hui, retracez l'évolution et les grands moments du handball.</p>
+                <a href="Pages_HTML/histoire.html">Lire l'histoire complète</a>
+            </div>
+            <div class="pages">
+                <i class="fa-solid fa-hand"></i>
+                <h3>À propos</h3>
+                <p>Découvrez mon parcours personnel, ma passion pour le handball et mes expériences sur le terrain.</p>
+                <a href="Pages_HTML/a_propos.html">En savoir plus sur moi </a>
+            </div>
         </section>
-        <section id="actualites">
-            <h2>Actualités</h2>
-            <p>Toutes les dernières nouvelles sur le handball.</p>
+        <section id="newsletter">
+            <h2>Rejoignez notre communauté</h2>
+            <p>Abonnez-vous pour recevoir les dernières nouvelles et articles sur le handball !</p>
+            <form action="newsletter.php" method="POST">
+                <input type="email" placeholder="Votre adresse email" required>
+                <button type="submit">S'abonner</button>
+            </form>
         </section>
-        <section id ="le_handball">
-            <p> Le handball est un sport collectif intense et stratégique, pratiqué principalement en salle, 
-                qui oppose deux équipes de 7 joueurs (6 joueurs de champ et un gardien de but). L’objectif est de marquer des buts en 
-                lançant le ballon dans les filets adverses tout en respectant des règles spécifiques, comme le dribble, les passes, et 
-                les limites de contact physique. Né en Europe au début du XXᵉ siècle, ce sport s’est imposé comme une discipline majeure, 
-                particulièrement populaire dans des pays comme la France, l’Allemagne et le Danemark. Joué sur un terrain de 40 mètres sur 20, 
-                les matchs se déroulent en deux mi-temps de 30 minutes, garantissant un rythme rapide et des scores élevés. Outre sa version classique, 
-                il existe des variantes comme le handball de plage, qui met en avant des actions acrobatiques. Avec des compétitions prestigieuses telles que 
-                les Jeux Olympiques ou la Ligue des Champions EHF, le handball séduit par son intensité, son esprit d’équipe et son accessibilité, en faisant 
-                un sport apprécié des passionnés et des novices.</p>
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <form action="contact.php" method="POST">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
         </section>
+        <footer>
+            <p>© 2024 Handball Air Force. Tous droits réservés.</p>
+        </footer>
     </main>
 </body>
+
+
+
 </html>

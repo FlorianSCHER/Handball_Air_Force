@@ -34,7 +34,13 @@ body {
     text-align: center;
     /* Centre également le texte globalement */
 }
-h1,h2,h3,h4,h5,h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -44,6 +50,7 @@ a {
     color: #0066cc;
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
 }
@@ -58,7 +65,7 @@ img {
 /* =================================================================
    En-tête
 ================================================================= */
-.bandeau{
+.bandeau {
     background-color: #0066cc;
     /* Couleur bleue pour l'en-tête */
     color: white;
@@ -184,7 +191,12 @@ main {
     /* Ajuste pour les petits écrans */
 }
 
-main h1,h2,h3,h4,h5,h6 {
+main h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 20px 0;
     border-bottom: 2px solid #ddd;
     /* Ligne décorative */
@@ -193,31 +205,34 @@ main h1,h2,h3,h4,h5,h6 {
     text-align: center;
     /* Centre les sous-titres */
 }
- h1{
-    color: red
 
- }
- h2 {
+h1 {
+    color: red
+}
+
+h2 {
     color: blue;
 
 }
- h3{
+
+h3 {
     color: blueviolet
 }
- h4{
+
+h4 {
     color: purple
-
 }
 
-h5{
+h5 {
     color: orange
-
 }
 
-h6{
-    color:green
+h6 {
+    color: green
 }
-main p, main li {
+
+main p,
+main li {
     margin: 10px 0;
 }
 
@@ -308,6 +323,7 @@ section ul {
     padding-left: 20px;
     /* Indentation pour les puces */
 }
+
 section li {
     font-size: 1rem;
     /* Taille de la police des éléments de la liste */
@@ -331,7 +347,8 @@ section li {
     color: #444;
 }
 
-#Debuts, #context {
+#Debuts,
+#context {
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 20px;
@@ -359,144 +376,282 @@ section li {
     border-left: 5px solid #28a745;
     padding: 15px;
 
-    
+
 }
-@media (max-width: 768px) {
-    /* =================================================================
-    Ajuste la taille du titre principal dans l'en-tête sur mobile
-    ================================================================== */
-    header h1 {
-        font-size: 2rem;
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+form input,
+form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 0.5rem 1rem;
+    background-color: #0a9396;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#newsletter input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#newsletter button {
+    padding: 0.5rem 1rem;
+
+    #newsletter form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
     }
 
-    /* =================================================================
+    #newsletter input {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #newsletter button {
+        padding: 0.5rem 1rem;
+        background-color: #005f73;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #quiz {
+        margin: 20px auto;
+        padding: 20px;
+        background: #f8f9fa;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        max-width: 600px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #quiz h2 {
+        text-align: center;
+        color: #0056b3;
+        margin-bottom: 20px;
+    }
+
+    .quiz-question {
+        margin: 15px 0;
+        font-size: 1.1rem;
+    }
+
+    .quiz-question label {
+        display: block;
+        margin: 5px 0;
+    }
+
+    button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #0056b3;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #ffcc00;
+        color: #0056b3;
+    }
+
+    #quiz-result {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #28a745;
+    }
+
+    @media (max-width: 768px) {
+
+        /* =================================================================
+    Ajuste la taille du titre principal dans l'en-tête sur mobile
+    ================================================================== */
+        header h1 {
+            font-size: 2rem;
+        }
+
+        /* =================================================================
     Modification du menu de navigation : passe les éléments en colonne
     pour s'adapter aux petits écrans
     ================================================================== */
-    header nav ul {
-        flex-direction: column;
-        /* Les liens passent en colonne */
-        align-items: center;
-        width: 100%; /* Assure que les liens prennent toute la largeur */
-    }
+        header nav ul {
+            flex-direction: column;
+            /* Les liens passent en colonne */
+            align-items: center;
+            width: 100%;
+            /* Assure que les liens prennent toute la largeur */
+        }
 
-    /* =================================================================
+        /* =================================================================
     Ajuste la disposition des bannières (top et bottom) en colonne
     ================================================================== */
-    .bandeau {
-        flex-direction: column;
-        /* Les logos passent en colonne */
-        gap: 10px; /* Espacement réduit entre les logos */
-        width: 100%; /* Prend toute la largeur */
-    }
+        .bandeau {
+            flex-direction: column;
+            /* Les logos passent en colonne */
+            gap: 10px;
+            /* Espacement réduit entre les logos */
+            width: 100%;
+            /* Prend toute la largeur */
+        }
 
-    /* =================================================================
+        /* =================================================================
     Modifie la taille des images dans les bannières pour s'ajuster à la taille mobile
     ================================================================== */
-    .bandeau img,
-     img {
-        width: 80%;
-        /* Les images prennent 80% de la largeur de l'écran */
-        max-height: 50px;
-        height: auto; /* Maintient la proportion de l'image */
-    }
+        .bandeau img,
+        img {
+            width: 80%;
+            /* Les images prennent 80% de la largeur de l'écran */
+            max-height: 50px;
+            height: auto;
+            /* Maintient la proportion de l'image */
+        }
 
-    /* =================================================================
+        /* =================================================================
     Modifie l'apparence du corps de la page pour occuper toute la largeur de l'écran
     ================================================================== */
-    body {
-        background-color: white;
-        /* Supprime le fond gris */
-        width: 100%; /* Utilise toute la largeur disponible */
-    }
+        body {
+            background-color: white;
+            /* Supprime le fond gris */
+            width: 100%;
+            /* Utilise toute la largeur disponible */
+        }
 
-    /* =================================================================
+        /* =================================================================
     Mise en page de la section principale : réduction des marges et padding
     pour occuper tout l'écran sur mobile
     ================================================================== */
-    main {
-        background-color: white;
-        padding: 15px;
-        width: 100%; /* Prend toute la largeur de l'écran */
-        box-shadow: none; /* Supprime l'ombre (cadre) */
-        border-radius: 0; /* Supprime les coins arrondis */
-        margin: 0; /* Supprime les marges */
-    }
+        main {
+            background-color: white;
+            padding: 15px;
+            width: 100%;
+            /* Prend toute la largeur de l'écran */
+            box-shadow: none;
+            /* Supprime l'ombre (cadre) */
+            border-radius: 0;
+            /* Supprime les coins arrondis */
+            margin: 0;
+            /* Supprime les marges */
+        }
 
-    /* =================================================================
+        /* =================================================================
     Tables : ajustement pour qu'elles prennent toute la largeur disponible
     ================================================================== */
-    table {
-        width: 100%; /* Utilise toute la largeur de l'écran */
-        margin: 15px 0; /* Espacement autour des tableaux */
-    }
+        table {
+            width: 100%;
+            /* Utilise toute la largeur de l'écran */
+            margin: 15px 0;
+            /* Espacement autour des tableaux */
+        }
 
-    /* =================================================================
+        /* =================================================================
     Modification du style des cellules de tableau pour une meilleure lisibilité
     ================================================================== */
-    table th,
-    table td {
-        border: 1px solid #ddd; /* Garde la bordure, mais peut être ajustée si nécessaire */
-        padding: 8px; /* Réduit les espaces internes */
-        text-align: left; /* Aligne le texte à gauche pour plus de lisibilité */
-    }
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            /* Garde la bordure, mais peut être ajustée si nécessaire */
+            padding: 8px;
+            /* Réduit les espaces internes */
+            text-align: left;
+            /* Aligne le texte à gauche pour plus de lisibilité */
+        }
 
 
-    /* =================================================================
+        /* =================================================================
     Section "Sanctions" : ajuste les espacements et la taille de police
     pour une meilleure lisibilité sur mobile
     ================================================================== */
-    section {
-        margin: 20px 0;
-        /* Espacement adapté pour mobile */
-    }
+        section {
+            margin: 20px 0;
+            /* Espacement adapté pour mobile */
+        }
 
-    section h2 {
-        font-size: 1.8rem; /* Réduit la taille du titre pour l'adapter à l'écran */
-    }
+        section h2 {
+            font-size: 1.8rem;
+            /* Réduit la taille du titre pour l'adapter à l'écran */
+        }
 
-    section p {
-        font-size: 1rem;
-        margin-bottom: 15px; /* Réduit l'espacement sous le paragraphe */
-    }
+        section p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            /* Réduit l'espacement sous le paragraphe */
+        }
 
-    section ul {
-        list-style-type: disc; /* Liste avec puces classiques */
-        padding-left: 20px; /* Indentation pour les puces */
-    }
+        section ul {
+            list-style-type: disc;
+            /* Liste avec puces classiques */
+            padding-left: 20px;
+            /* Indentation pour les puces */
+        }
 
-    section li {
-        font-size: 1rem; /* Taille de la police des éléments de la liste */
-        margin-bottom: 10px; /* Espacement entre les éléments */
-    }
+        section li {
+            font-size: 1rem;
+            /* Taille de la police des éléments de la liste */
+            margin-bottom: 10px;
+            /* Espacement entre les éléments */
+        }
 
-    /* =================================================================
+        /* =================================================================
     Icônes sociales : réduit leur taille et ajuste l'espacement
     ================================================================== */
-    .social-icons {
-        gap: 10px; /* Réduit l'espacement entre les icônes */
-    }
+        .social-icons {
+            gap: 10px;
+            /* Réduit l'espacement entre les icônes */
+        }
 
-    .social-icons img {
-        width: 35px;
-        height: 35px; /* Réduit la taille des icônes à 35px */
+        .social-icons img {
+            width: 35px;
+            height: 35px;
+            /* Réduit la taille des icônes à 35px */
+        }
+
+        /* =================================================================
+    Animations : effets de survol plus adaptés pour mobile
+    ================================================================== */
+        header nav ul li a:hover {
+            transform: translateY(-3px);
+            /* Déplace légèrement l'élément au survol */
+            transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .social-icons img:hover {
+            transform: rotate(10deg) scale(1.2);
+            /* Ajoute une rotation et un zoom au survol */
+            transition: transform 0.3s ease;
+        }
     }
 
     /* =================================================================
-    Animations : effets de survol plus adaptés pour mobile
-    ================================================================== */
-    header nav ul li a:hover {
-        transform: translateY(-3px); /* Déplace légèrement l'élément au survol */
-        transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
-    }
-
-    .social-icons img:hover {
-        transform: rotate(10deg) scale(1.2); /* Ajoute une rotation et un zoom au survol */
-        transition: transform 0.3s ease;
-    }
-}
-
-/* =================================================================
    Animations CSS
 ================================================================= */
     header nav ul li a:hover {
@@ -509,124 +664,178 @@ section li {
         transition: transform 0.3s ease;
     }
 
-/* --- Fond dynamique --- */
-body {
-    background-image: url('../Images/ffhb.jfif');
-    background-size: cover;
-    background-attachment: fixed;
-    animation: changeBackground 15s infinite;
-}
-
-@keyframes changeBackground {
-    0% {
+    /* --- Fond dynamique --- */
+    body {
         background-image: url('../Images/ffhb.jfif');
+        background-size: cover;
+        background-attachment: fixed;
+        animation: changeBackground 15s infinite;
     }
-    33% {
-        background-image: url('../Images/ehf.png');
+
+    @keyframes changeBackground {
+        0% {
+            background-image: url('../Images/ffhb.jfif');
+        }
+
+        33% {
+            background-image: url('../Images/ehf.png');
+        }
+
+        66% {
+            background-image: url('../Images/ihf.png');
+        }
+
+        100% {
+            background-image: url('../Images/ffhb.jfif');
+        }
     }
-    66% {
-        background-image: url('../Images/ihf.png');
+
+    /* --- Grille CSS pour les pages spécifiques --- */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin: 20px 0;
     }
-    100% {
-        background-image: url('../Images/ffhb.jfif');
+
+    .grid-item {
+        padding: 15px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* --- Flexbox pour les équipes ou sections --- */
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .flex-item {
+        flex: 1 1 300px;
+        padding: 15px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.02);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+
+    /* --- Transitions entre pages --- */
+    body {
+        opacity: 0;
+        animation: fadeInBody 1.5s forwards;
+    }
+
+    @keyframes fadeInBody {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* --- Accessibilité (focus visible) --- */
+    a:focus {
+        outline: 2px dashed #0056b3;
+        outline-offset: 4px;
+    }
+
+    /* --- Animations CSS --- */
+    h1 {
+        animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .social-icons img {
+        animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+
+        40% {
+            transform: translateY(-10px);
+        }
+
+        60% {
+            transform: translateY(-5px);
+        }
     }
 }
 
-/* --- Grille CSS pour les pages spécifiques --- */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.grid-item {
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* --- Flexbox pour les équipes ou sections --- */
-.flex-container {
+.defillement {
     display: flex;
-    flex-wrap: wrap;
+    overflow: auto;
     gap: 20px;
-    justify-content: center;
 }
 
-.flex-item {
-    flex: 1 1 300px;
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    animation: pulse 2s infinite;
+.pages {
+    min-width: 300px;
+    flex: 0 0 auto;
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.02);
-    }
-    100% {
-        transform: scale(1);
-    }
+footer {
+    background-color: #0a9396;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
 }
 
+ /* Animation de réussite */
+ @keyframes scaleUp {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
 
-/* --- Transitions entre pages --- */
-body {
-    opacity: 0;
-    animation: fadeInBody 1.5s forwards;
-}
+  /* Animation d'erreur (tremblement) */
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+  }
 
-@keyframes fadeInBody {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* --- Accessibilité (focus visible) --- */
-a:focus {
-    outline: 2px dashed #0056b3;
-    outline-offset: 4px;
-}
-
-/* --- Animations CSS --- */
-h1 {
-    animation: fadeIn 1.5s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.social-icons img {
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
-
+  /* Animation d'échec */
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0.3; }
+  }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les bases du handball</title>
+    <title>Handball Air Force</title>
     <link rel="stylesheet" href="../../CSS/base_handball.css">
     <!-- Importation des polices -->
     <link
@@ -112,18 +112,35 @@
                             de coupe de normandie du club</li>
                         <li><a
                                 href="https://www.ouest-france.fr/normandie/giberville-14730/a-giberville-la-ceremonie-recompense-les-clubs-sportifs-mais-alerte-sur-le-maintien-des-aides-978ba418-b01f-11ef-8992-707451e15361"><img
-                                    src="../Images/triple_monte.avif" alt="La triple monté"></a> Les trois equipes séniors montent de division, la premiere triple monté du club
+                                    src="../Images/triple_monte.avif" alt="La triple monté"></a> Les trois equipes
+                            séniors montent de division, la premiere triple monté du club
                         </li>
-                        <li><img src="../Images/coupe.jpg" alt="Coupe de normandie"> La premiere coupe au niveau régionnal du club</li>
+                        <li><img src="../Images/coupe.jpg" alt="Coupe de normandie"> La premiere coupe au niveau
+                            régionnal du club</li>
                     </ul>
                 </div>
                 </h2>
             </main>
-            <!-- Pied de page -->
-            <footer>
-                <p>Contactez-nous : m.florian.scher@gmail.com </p>
-            </footer>
 
+            <section id="contact">
+                <h2>Contactez-moi</h2>
+                <form action="contact.php" method="POST">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </section>
+        </main>
     </body>
+    <footer>
+        <p>© 2024 Handball Air Force. Tous droits réservés.</p>
+    </footer>
 
 </html>
