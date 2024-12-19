@@ -515,7 +515,7 @@ button:hover {
     img {
         width: 80%;
         /* Les images prennent 80% de la largeur de l'écran */
-        max-height: 50px;
+        max-height: auto;
         height: auto;
         /* Maintient la proportion de l'image */
     }
