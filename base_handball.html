@@ -506,38 +506,39 @@
                         3 secondes.</li>
                 </ul>
             </section>
+            <section id="quiz">
+                <h2>Testez vos connaissances sur les règles du handball</h2>
+                <form id="quiz-form">
+                    <!-- Question 1 -->
+                    <div class="quiz-question">
+                        <p>1. Combien de joueurs sont sur le terrain par équipe ?</p>
+                        <label><input type="radio" name="q1" value="6"> 6</label>
+                        <label><input type="radio" name="q1" value="7"> 7</label>
+                        <label><input type="radio" name="q1" value="8"> 8</label>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="quiz-question">
+                        <p>2. Combien de temps dure une mi-temps ?</p>
+                        <label><input type="radio" name="q2" value="30"> 30 minutes</label>
+                        <label><input type="radio" name="q2" value="45"> 45 minutes</label>
+                        <label><input type="radio" name="q2" value="60"> 60 minutes</label>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="quiz-question">
+                        <p>3. Quelle est la taille standard d'un terrain de handball ?</p>
+                        <label><input type="radio" name="q3" value="30x15"> 30m x 15m</label>
+                        <label><input type="radio" name="q3" value="40x20"> 40m x 20m</label>
+                        <label><input type="radio" name="q3" value="50x30"> 50m x 30m</label>
+                    </div>
+
+                    <button type="button" onclick="checkAnswers()">Vérifier vos réponses</button>
+                </form>
+                <p id="quiz-result"></p>
+            </section>
     </main>
-    <section id="quiz">
-        <h2>Testez vos connaissances sur les règles du handball</h2>
-        <form id="quiz-form">
-            <!-- Question 1 -->
-            <div class="quiz-question">
-                <p>1. Combien de joueurs sont sur le terrain par équipe ?</p>
-                <label><input type="radio" name="q1" value="6"> 6</label>
-                <label><input type="radio" name="q1" value="7"> 7</label>
-                <label><input type="radio" name="q1" value="8"> 8</label>
-            </div>
 
-            <!-- Question 2 -->
-            <div class="quiz-question">
-                <p>2. Combien de temps dure une mi-temps ?</p>
-                <label><input type="radio" name="q2" value="30"> 30 minutes</label>
-                <label><input type="radio" name="q2" value="45"> 45 minutes</label>
-                <label><input type="radio" name="q2" value="60"> 60 minutes</label>
-            </div>
-
-            <!-- Question 3 -->
-            <div class="quiz-question">
-                <p>3. Quelle est la taille standard d'un terrain de handball ?</p>
-                <label><input type="radio" name="q3" value="30x15"> 30m x 15m</label>
-                <label><input type="radio" name="q3" value="40x20"> 40m x 20m</label>
-                <label><input type="radio" name="q3" value="50x30"> 50m x 30m</label>
-            </div>
-
-            <button type="button" onclick="checkAnswers()">Vérifier vos réponses</button>
-        </form>
-        <p id="quiz-result"></p>
-    </section>
     <script>
         function checkAnswers() {
             let score = 0;
