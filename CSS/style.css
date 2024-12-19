@@ -819,23 +819,90 @@ footer {
     margin-top: 30px;
 }
 
- /* Animation de réussite */
- @keyframes scaleUp {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-  }
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-  /* Animation d'erreur (tremblement) */
-  @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-  }
+.question {
+    margin-bottom: 15px;
+}
 
-  /* Animation d'échec */
-  @keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0.3; }
-  }
+.answers {
+    margin: 10px 0;
+}
+
+.answer {
+    margin-left: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.congratulation {
+    color: green;
+    font-size: 1.5em;
+    animation: celebration 2s ease-in-out;
+}
+
+.motivation {
+    color: red;
+    font-size: 1.5em;
+    animation: shake 0.5s infinite;
+}
+
+@keyframes celebration {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    75% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
