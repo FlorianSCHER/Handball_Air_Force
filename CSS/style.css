@@ -651,6 +651,37 @@ button:hover {
         /* Ajoute un défilement horizontal si nécessaire */
     }
 
+    /* Conteneur de vidéo responsive */
+    .video-section {
+        position: relative;
+        width: 100%;
+        /* Prend toute la largeur disponible */
+        padding-bottom: 56.25%;
+        /* Ratio 16:9 (hauteur = largeur * 9/16) */
+        height: 0;
+        /* Nécessaire pour le positionnement absolu */
+        overflow: hidden;
+        /* Cache tout débordement */
+        margin: 0 auto;
+        /* Centrer le conteneur */
+        border-radius: 8px;
+        /* Arrondi des coins */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Ombre pour un effet esthétique */
+    }
+
+    /* Style pour la vidéo */
+    .video-section iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* S'étire à la largeur du conteneur */
+        height: 100%;
+        /* S'étire à la hauteur calculée */
+        border: 0;
+        /* Supprime la bordure */
+    }
 
     /* =================================================================
     Section "Sanctions" : ajuste les espacements et la taille de police
