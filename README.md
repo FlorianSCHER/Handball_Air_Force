@@ -67,7 +67,7 @@ Si vous avez des idées pour de nouvelles sections ou des suggestions pour amél
 
 ## License
 
-Ce projet est sous la licence MIT – consultez le fichier LICENSE pour plus d'informations.
+Ce projet respecte les normes W3C 
 
 ## Liens utiles
 
