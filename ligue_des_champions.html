@@ -1038,12 +1038,134 @@
                 </li>
             </ul>
         </section>
+        <section> Quizz
+
+            <div class="container">
+                <form id="quizForm">
+                    <!-- Question 1 -->
+                    <div class="question">
+                        <h2>1. En quelle année a eu lieu la première édition de la Coupe des Champions Européens ?</h2>
+                        <ul class="answers">
+                            <li><label><input type="radio" name="q1" value="a"> 1957</label></li>
+                            <li><label><input type="radio" name="q1" value="b"> 1960</label></li>
+                            <li><label><input type="radio" name="q1" value="c"> 1975</label></li>
+                            <li><label><input type="radio" name="q1" value="d"> 1980</label></li>
+                        </ul>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="question">
+                        <h2>2. Quel était le but principal de la création de la Coupe des Champions Européens ?</h2>
+                        <ul class="answers">
+                            <li><label><input type="radio" name="q2" value="a"> Augmenter les revenus des clubs</label>
+                            </li>
+                            <li><label><input type="radio" name="q2" value="b"> Offrir une compétition continentale pour
+                                    les clubs champions nationaux</label></li>
+                            <li><label><input type="radio" name="q2" value="c"> Renforcer les relations entre les
+                                    fédérations nationales</label></li>
+                            <li><label><input type="radio" name="q2" value="d"> Organiser des tournois amicaux</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question">
+                        <h2>3. Quel club soviétique était particulièrement dominant dans les années 1960 ?</h2>
+                        <ul class="answers">
+                            <li><label><input type="radio" name="q3" value="a"> Partizan Belgrade</label></li>
+                            <li><label><input type="radio" name="q3" value="b"> Dynamo Moscou</label></li>
+                            <li><label><input type="radio" name="q3" value="c"> Metaloplastika</label></li>
+                            <li><label><input type="radio" name="q3" value="d"> PSG Handball</label></li>
+                        </ul>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="question">
+                        <h2>4. Quels facteurs ont favorisé la domination des clubs d’Europe de l’Est ?</h2>
+                        <ul class="answers">
+                            <li><label><input type="radio" name="q4" value="a"> Soutien étatique et préparation physique
+                                    avancée</label></li>
+                            <li><label><input type="radio" name="q4" value="b"> Sponsoring privé massif</label></li>
+                            <li><label><input type="radio" name="q4" value="c"> Recrutement de joueurs étrangers</label>
+                            </li>
+                            <li><label><input type="radio" name="q4" value="d"> Faibles compétitions nationales</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="question">
+                        <h2>5. Quel club français a dominé le handball dans les années 2000 ?</h2>
+                        <ul class="answers">
+                            <li><label><input type="radio" name="q5" value="a"> Paris Saint-Germain Handball</label>
+                            </li>
+                            <li><label><input type="radio" name="q5" value="b"> Montpellier Handball</label></li>
+                            <li><label><input type="radio" name="q5" value="c"> Nantes Handball</label></li>
+                            <li><label><input type="radio" name="q5" value="d"> Chambéry Savoie Handball</label></li>
+                        </ul>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="question">
+                        <h2>6. Quelle nouvelle structure a été introduite dans la Ligue des Champions en 1993 ?</h2>
+                        <ul class="answers">
+                            <li><label><input type="radio" name="q6" value="a"> Format à élimination directe</label>
+                            </li>
+                            <li><label><input type="radio" name="q6" value="b"> Phases de groupes</label></li>
+                            <li><label><input type="radio" name="q6" value="c"> Final Four</label></li>
+                            <li><label><input type="radio" name="q6" value="d"> Introduction du handball mixte</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button type="button" class="submit" onclick="checkAnswers()">Soumettre</button>
+
+                    <div id="result" class="result"></div>
+                </form>
+            </div>
+        </section>
+
         <footer>
             <p>© 2024 Handball Air Force. Tous droits réservés.</p>
         </footer>
-        
     </main>
+    <script>const correctAnswers = {
+            q1: 'a',
+            q2: 'b',
+            q3: 'b',
+            q4: 'a',
+            q5: 'b',
+            q6: 'b'
+        };
 
+        function checkAnswers() {
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswers).length;
+
+            for (let question in correctAnswers) {
+                const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (userAnswer && userAnswer.value === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            displayResult(score, totalQuestions);
+        }
+
+        function displayResult(score, totalQuestions) {
+            const resultDiv = document.getElementById('result');
+
+            if (score === totalQuestions) {
+                resultDiv.textContent = `Parfait ! Vous avez obtenu ${score}/${totalQuestions}.`;
+                resultDiv.className = 'result good';
+            } else if (score >= totalQuestions / 2) {
+                resultDiv.textContent = `Bien joué ! Vous avez obtenu ${score}/${totalQuestions}.`;
+                resultDiv.className = 'result average';
+            } else {
+                resultDiv.textContent = `Dommage... Vous avez obtenu ${score}/${totalQuestions}. Réessayez !`;
+                resultDiv.className = 'result bad';
+            }
+        }</script>
 </body>
 
 </html>
