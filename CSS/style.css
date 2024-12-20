@@ -320,16 +320,22 @@ section li {
     /* Fond clair avec une bordure bleue à gauche pour un style d'encart visuel */
     background-color: #eef4fc;
     border-left: 4px solid #0056b3;
-    padding: 15px; /* Espacement interne pour une meilleure lisibilité */
-    margin: 20px 0; /* Espacement externe pour séparer l'encart des autres éléments */
+    padding: 15px;
+    /* Espacement interne pour une meilleure lisibilité */
+    margin: 20px 0;
+    /* Espacement externe pour séparer l'encart des autres éléments */
 }
 
 #texte {
     /* Style général du texte pour une meilleure lisibilité */
-    font-size: 1rem; /* Taille de police standard */
-    line-height: 1.8; /* Interligne pour espacer les lignes de texte */
-    margin: 10px 0; /* Espacement externe pour le texte */
-    color: #444; /* Couleur de texte neutre et lisible */
+    font-size: 1rem;
+    /* Taille de police standard */
+    line-height: 1.8;
+    /* Interligne pour espacer les lignes de texte */
+    margin: 10px 0;
+    /* Espacement externe pour le texte */
+    color: #444;
+    /* Couleur de texte neutre et lisible */
 }
 
 #Debuts,
@@ -337,85 +343,121 @@ section li {
     /* Mise en avant des titres avec une taille plus grande et du gras */
     font-size: 1.2rem;
     font-weight: bold;
-    margin-top: 20px; /* Espacement au-dessus des titres */
+    margin-top: 20px;
+    /* Espacement au-dessus des titres */
 }
 
 #sportif_social {
     /* Style encadré doux avec un fond clair et arrondi */
-    background-color: #fefae0; /* Couleur de fond jaune pâle */
-    padding: 10px; /* Espacement interne */
-    border-radius: 5px; /* Coins arrondis pour un style moderne */
+    background-color: #fefae0;
+    /* Couleur de fond jaune pâle */
+    padding: 10px;
+    /* Espacement interne */
+    border-radius: 5px;
+    /* Coins arrondis pour un style moderne */
 }
 
 #competition_continentale {
     /* Mise en évidence avec une bordure en pointillés */
-    border: 2px dashed #0056b3; /* Bordure bleue en pointillés */
-    padding: 10px; /* Espacement interne */
-    margin: 15px 0; /* Espacement externe pour séparer des autres sections */
+    border: 2px dashed #0056b3;
+    /* Bordure bleue en pointillés */
+    padding: 10px;
+    /* Espacement interne */
+    margin: 15px 0;
+    /* Espacement externe pour séparer des autres sections */
 }
 
 #premier_tournoi {
     /* Style textuel pour mettre en valeur le contenu avec une couleur et un style italique */
-    color: #ff6f61; /* Couleur rouge-orangée pour attirer l'attention */
-    font-style: italic; /* Texte en italique */
+    color: #ff6f61;
+    /* Couleur rouge-orangée pour attirer l'attention */
+    font-style: italic;
+    /* Texte en italique */
 }
 
 #impact_heritage {
     /* Encadré avec une bordure verte pour mettre en avant une information importante */
-    background-color: #d4edda; /* Fond vert clair */
-    border-left: 5px solid #28a745; /* Bordure verte épaisse sur le côté gauche */
-    padding: 15px; /* Espacement interne */
+    background-color: #d4edda;
+    /* Fond vert clair */
+    border-left: 5px solid #28a745;
+    /* Bordure verte épaisse sur le côté gauche */
+    padding: 15px;
+    /* Espacement interne */
 }
 
 form {
     /* Mise en forme des formulaires pour une présentation verticale */
     display: flex;
-    flex-direction: column; /* Organisation verticale des éléments */
-    gap: 10px; /* Espacement entre les éléments du formulaire */
-    width: 50%; /* Formulaire centré avec une largeur de 50% */
-    margin: auto; /* Centrage horizontal */
+    flex-direction: column;
+    /* Organisation verticale des éléments */
+    gap: 10px;
+    /* Espacement entre les éléments du formulaire */
+    width: 50%;
+    /* Formulaire centré avec une largeur de 50% */
+    margin: auto;
+    /* Centrage horizontal */
 }
 
 form input,
 form textarea {
     /* Style des champs de formulaire pour uniformiser l'apparence */
-    padding: 0.5rem; /* Espacement interne pour rendre les champs confortables */
-    border: 1px solid #ccc; /* Bordure grise légère */
-    border-radius: 5px; /* Coins arrondis */
+    padding: 0.5rem;
+    /* Espacement interne pour rendre les champs confortables */
+    border: 1px solid #ccc;
+    /* Bordure grise légère */
+    border-radius: 5px;
+    /* Coins arrondis */
 }
 
 form button {
     /* Bouton avec un style moderne et des couleurs contrastantes */
-    padding: 0.5rem 1rem; /* Espacement interne */
-    background-color: #0a9396; /* Couleur de fond verte */
-    color: #fff; /* Texte blanc pour contraste */
-    border: none; /* Suppression de la bordure */
-    cursor: pointer; /* Changement de curseur au survol */
-    border-radius: 5px; /* Coins arrondis */
+    padding: 0.5rem 1rem;
+    /* Espacement interne */
+    background-color: #0a9396;
+    /* Couleur de fond verte */
+    color: #fff;
+    /* Texte blanc pour contraste */
+    border: none;
+    /* Suppression de la bordure */
+    cursor: pointer;
+    /* Changement de curseur au survol */
+    border-radius: 5px;
+    /* Coins arrondis */
 }
 
 #newsletter form {
     /* Mise en forme du formulaire de la newsletter pour un alignement horizontal */
     display: flex;
-    justify-content: center; /* Centrage horizontal des éléments */
-    gap: 10px; /* Espacement entre les champs */
+    justify-content: center;
+    /* Centrage horizontal des éléments */
+    gap: 10px;
+    /* Espacement entre les champs */
 }
 
 #newsletter input {
     /* Champs d'entrée du formulaire de newsletter */
-    padding: 0.5rem; /* Espacement interne */
-    border: 1px solid #ccc; /* Bordure grise légère */
-    border-radius: 5px; /* Coins arrondis */
+    padding: 0.5rem;
+    /* Espacement interne */
+    border: 1px solid #ccc;
+    /* Bordure grise légère */
+    border-radius: 5px;
+    /* Coins arrondis */
 }
 
 #newsletter button {
     /* Bouton du formulaire de newsletter */
-    padding: 0.5rem 1rem; /* Espacement interne */
-    background-color: #005f73; /* Couleur de fond bleue foncée */
-    color: #fff; /* Texte blanc pour contraste */
-    border: none; /* Suppression de la bordure */
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer; /* Changement de curseur au survol */
+    padding: 0.5rem 1rem;
+    /* Espacement interne */
+    background-color: #005f73;
+    /* Couleur de fond bleue foncée */
+    color: #fff;
+    /* Texte blanc pour contraste */
+    border: none;
+    /* Suppression de la bordure */
+    border-radius: 5px;
+    /* Coins arrondis */
+    cursor: pointer;
+    /* Changement de curseur au survol */
 }
 
 /* --- Style principal du conteneur du quiz --- */
@@ -580,20 +622,35 @@ button:hover {
     }
 
     table {
-        width: 100%; /* Adapte la largeur du tableau à celle de l'écran */
-        font-size: 0.9em; /* Réduit légèrement la taille de la police */
-      }
-    
-      table img {
-        max-width: 50px; /* Ajuste la taille des images comme le ballon */
-        height: auto; /* Conserve le ratio de l'image */
-      }
-    
-      td, th {
-        display: block; /* Rendre les cellules empilées pour les petits écrans */
+        width: 100%;
+        /* Adapte la largeur du tableau à celle de l'écran */
+        font-size: 0.9em;
+        /* Réduit légèrement la taille de la police */
+    }
+
+    table img {
+
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        /* Centrer l'image */
+
+    }
+
+    td,
+    th {
+        display: block;
+        /* Rendre les cellules empilées pour les petits écrans */
         text-align: center;
-      }
-    
+    }
+
+    .tableau {
+        width: 100%;
+        overflow-x: auto;
+        /* Ajoute un défilement horizontal si nécessaire */
+    }
+
 
     /* =================================================================
     Section "Sanctions" : ajuste les espacements et la taille de police
