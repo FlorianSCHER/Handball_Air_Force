@@ -579,29 +579,21 @@ button:hover {
         /* Supprime les marges */
     }
 
-    /* =================================================================
-    Tables : ajustement pour qu'elles prennent toute la largeur disponible
-    ================================================================== */
     table {
-        width: 100%;
-        /* Utilise toute la largeur de l'écran */
-        margin: 15px 0;
-        /* Espacement autour des tableaux */
-    }
-
-    /* =================================================================
-    Modification du style des cellules de tableau pour une meilleure lisibilité
-    ================================================================== */
-    table th,
-    table td {
-        border: 1px solid #ddd;
-        /* Garde la bordure, mais peut être ajustée si nécessaire */
-        padding: 8px;
-        /* Réduit les espaces internes */
-        text-align: left;
-        /* Aligne le texte à gauche pour plus de lisibilité */
-    }
-
+        width: 100%; /* Adapte la largeur du tableau à celle de l'écran */
+        font-size: 0.9em; /* Réduit légèrement la taille de la police */
+      }
+    
+      table img {
+        max-width: 50px; /* Ajuste la taille des images comme le ballon */
+        height: auto; /* Conserve le ratio de l'image */
+      }
+    
+      td, th {
+        display: block; /* Rendre les cellules empilées pour les petits écrans */
+        text-align: center;
+      }
+    
 
     /* =================================================================
     Section "Sanctions" : ajuste les espacements et la taille de police
