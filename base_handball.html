@@ -505,63 +505,99 @@
                     3 secondes.</li>
             </ul>
         </section>
-        <section id="quiz">
-            <h2>Testez vos connaissances sur les règles du handball</h2>
-            <form id="quiz-form">
-                <!-- Question 1 -->
-                <div class="quiz-question">
-                    <p>1. Combien de joueurs sont sur le terrain par équipe ?</p>
-                    <label><input type="radio" name="q1" value="6"> 6</label>
-                    <label><input type="radio" name="q1" value="7"> 7</label>
-                    <label><input type="radio" name="q1" value="8"> 8</label>
-                </div>
+        <div id="penalty">
+            <canvas id="gameCanvas" width="800" height="500"></canvas>
+            <div id="score">Score: 0</div>
+        </div>
 
-                <!-- Question 2 -->
-                <div class="quiz-question">
-                    <p>2. Combien de temps dure une mi-temps ?</p>
-                    <label><input type="radio" name="q2" value="30"> 30 minutes</label>
-                    <label><input type="radio" name="q2" value="45"> 45 minutes</label>
-                    <label><input type="radio" name="q2" value="60"> 60 minutes</label>
-                </div>
-
-                <!-- Question 3 -->
-                <div class="quiz-question">
-                    <p>3. Quelle est la taille standard d'un terrain de handball ?</p>
-                    <label><input type="radio" name="q3" value="30x15"> 30m x 15m</label>
-                    <label><input type="radio" name="q3" value="40x20"> 40m x 20m</label>
-                    <label><input type="radio" name="q3" value="50x30"> 50m x 30m</label>
-                </div>
-
-                <button type="button" onclick="checkAnswers()">Vérifier vos réponses</button>
-            </form>
-            <p id="quiz-result"></p>
-        </section>
+        <footer>
+            <p>© 2024 Handball Air Force. Tous droits réservés.</p>
+        </footer>
     </main>
 
     <script>
-        function checkAnswers() {
-            let score = 0;
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        let score = 0;
+        let ballX = 50, ballY = canvas.height / 2, ballRadius = 10, ballSpeedX = 0, ballSpeedY = 0;
+        let goalkeeperX, goalkeeperY, goalkeeperWidth = 30, goalkeeperHeight = 60; // Gardien plus petit
+        let shooting = false;
 
-            // Vérifie les réponses
-            if (document.querySelector('input[name=\"q1\"]:checked')?.value === '7') score++;
-            if (document.querySelector('input[name=\"q2\"]:checked')?.value === '30') score++;
-            if (document.querySelector('input[name=\"q3\"]:checked')?.value === '40x20') score++;
+        document.addEventListener('mousemove', aimBall);
+        document.addEventListener('click', shootBall);
 
-            // Récupération de l'élément résultat
-            const resultDiv = document.getElementById('quiz-result');
-
-            // Messages et animations basés sur le score
-            if (score === 3) {
-                resultDiv.textContent = `Bravo ! 🎉 Vous êtes un expert avec ${score}/3 bonnes réponses.`;
-                resultDiv.className = 'success';
-            } else if (score === 2) {
-                resultDiv.textContent = `Bien joué ! Vous avez ${score}/3 bonnes réponses. Essayez encore pour le perfect ! 😉`;
-                resultDiv.className = 'warning';
-            } else {
-                resultDiv.textContent = `Pas de panique ! Vous avez ${score}/3 bonnes réponses. Entraînez-vous encore ! 💪`;
-                resultDiv.className = 'failure';
+        function aimBall(event) {
+            if (!shooting) {
+                ballY = event.clientY - canvas.offsetTop;
             }
         }
+
+        function shootBall() {
+            if (!shooting) {
+                ballSpeedX = 10;  // Vitesse horizontale
+                ballSpeedY = 0;   // Aucune vitesse verticale, donc le ballon va droit
+                shooting = true;
+                setTimeout(spawnGoalkeeper, 500); // Apparition du gardien après un court délai
+            }
+        }
+
+        function spawnGoalkeeper() {
+            // Positionne le gardien de manière aléatoire dans la zone du but
+            goalkeeperX = canvas.width - 100;
+            goalkeeperY = Math.random() * (canvas.height - goalkeeperHeight);
+        }
+
+        function updatePenalty() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Déplacement du gardien aléatoirement
+            goalkeeperY += (Math.random() - 0.5) * 4; // Déplacement aléatoire vertical du gardien
+            if (goalkeeperY < 0) goalkeeperY = 0;
+            if (goalkeeperY + goalkeeperHeight > canvas.height) goalkeeperY = canvas.height - goalkeeperHeight;
+
+            // Dessine le gardien
+            ctx.fillStyle = 'red';
+            ctx.fillRect(goalkeeperX, goalkeeperY, goalkeeperWidth, goalkeeperHeight);
+
+            // Dessine le ballon
+            ctx.fillStyle = 'blue';
+            ctx.beginPath();
+            ctx.arc(ballX, ballY, ballRadius, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Déplace le ballon
+            ballX += ballSpeedX;
+            ballY += ballSpeedY;
+
+            // Vérifie la collision avec le gardien
+            if (ballX + ballRadius >= goalkeeperX && ballY >= goalkeeperY && ballY <= goalkeeperY + goalkeeperHeight) {
+                alert("Le gardien a arrêté le tir !");
+                resetBall();
+            }
+
+            // Vérifie si le ballon sort des limites (but marqué)
+            if (ballX > canvas.width) {
+                score++;
+                resetBall();
+            }
+
+            // Affiche le score
+            document.getElementById('score').textContent = `Score: ${score}`;
+
+            requestAnimationFrame(updatePenalty);
+        }
+
+        function resetBall() {
+            ballX = 50;
+            ballY = canvas.height / 2;
+            ballSpeedX = 0;
+            ballSpeedY = 0;
+            shooting = false;
+        }
+
+        updatePenalty();
+
+
     </script>
 </body>
 
